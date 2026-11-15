@@ -1,32 +1,29 @@
 package org.example;
 
-import org.example.Lojas.LojaDePizzaChicago;
 import org.example.Lojas.LojaDePizzaNovaYork;
+import org.example.Lojas.LojaDePizzaChicago;
 
 public class Main {
+
     public static void main(String[] args) {
 
-        System.out.println("========== LOJA DE NOVA YORK ==========");
-        LojaDePizza lojaNovaYork = new LojaDePizza() {
-            @Override
-            protected Pizza criarPizza(String tipo) {
-                return null;
-            }
-        };
+        LojaDePizza lojaNovaYork =
+                new LojaDePizzaNovaYork();
 
-        // A loja de NY cria a pizza de queijo
-        System.out.println("\nPedindo uma pizza de queijo:");
+        LojaDePizza lojaChicago =
+                new LojaDePizzaChicago();
+
+        System.out.println("=== LOJA DE NOVA YORK ===");
+
         lojaNovaYork.pedirPizza("queijo");
+        lojaNovaYork.pedirPizza("calabresa");
+        lojaNovaYork.pedirPizza("frango");
 
-        System.out.println("\n========== LOJA DE CHICAGO ==========");
-        LojaDePizza lojaChicago = new LojaDePizzaChicago();
+        System.out.println();
 
-        // A loja de Chicago cria a pizza de calabresa
-        System.out.println("\nPedindo uma pizza de calabresa:");
+        System.out.println("=== LOJA DE CHICAGO ===");
+
         lojaChicago.pedirPizza("calabresa");
-
-        // Testando o erro (a loja de Chicago não vende queijo)
-        System.out.println("\nPedindo uma pizza de queijo em Chicago (não deve existir):");
-        lojaChicago.pedirPizza("queijo");
+        lojaChicago.pedirPizza("frango");
     }
 }

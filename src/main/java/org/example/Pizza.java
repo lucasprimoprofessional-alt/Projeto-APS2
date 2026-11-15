@@ -1,11 +1,18 @@
 package org.example;
 
+import org.example.Ingredientes.Massa;
+import org.example.Ingredientes.Molho;
+import org.example.Ingredientes.Queijo;
+
 public abstract class Pizza {
+
     protected String nome;
 
-    public void preparar() {
-        System.out.println("Preparando " + nome);
-    }
+    protected Massa massa;
+    protected Molho molho;
+    protected Queijo queijo;
+
+    public abstract void preparar();
 
     public void assar() {
         System.out.println("Assando " + nome);
@@ -16,6 +23,6 @@ public abstract class Pizza {
     }
 
     public void embalar() {
-        System.out.println("Embalando " + nome + " na caixa oficial");
+        System.out.println("Embalando " + nome);
     }
 }
