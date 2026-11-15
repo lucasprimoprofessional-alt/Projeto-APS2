@@ -6,6 +6,6 @@ public interface FabricaDeIngredientes {
     Massa criarMassa();
     Molho criarMolho();
     Queijo criarQueijo();
-    Calabresa criarCalabresa();
-    Frango criarFrango();
+    //Calabresa criarCalabresa();
+    //Frango criarFrango();
 }
