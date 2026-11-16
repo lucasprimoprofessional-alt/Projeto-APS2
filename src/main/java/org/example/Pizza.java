@@ -1,16 +1,15 @@
 package org.example;
 
-import org.example.Ingredientes.Massa;
-import org.example.Ingredientes.Molho;
-import org.example.Ingredientes.Queijo;
+import org.example.Ingredientes.*;
 
 public abstract class Pizza {
 
     protected String nome;
-
     protected Massa massa;
     protected Molho molho;
     protected Queijo queijo;
+    protected Calabresa calabresa;
+    protected Frango frango;
 
     public abstract void preparar();
 

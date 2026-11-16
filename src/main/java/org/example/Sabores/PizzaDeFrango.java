@@ -19,9 +19,11 @@ public class PizzaDeFrango extends Pizza {
         massa = fabrica.criarMassa();
         molho = fabrica.criarMolho();
         queijo = fabrica.criarQueijo();
+        frango = fabrica.criarFrango();
 
         System.out.println("Massa: " + massa.getNome());
         System.out.println("Molho: " + molho.getNome());
         System.out.println("Queijo: " + queijo.getNome());
+        System.out.println("Calabresa: " + frango.getNome());
     }
 }
